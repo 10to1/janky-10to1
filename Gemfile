@@ -1,5 +1,5 @@
 source "http://rubygems.org"
-gem "janky", :git => "git://github.com/pjaspers/janky.git"
+gem "janky", :git => "git://github.com/pjaspers/janky.git", :branch => "not_valid"
 gem "pg"
 gem "thin"
 gem "heroku"
