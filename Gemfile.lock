@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/pjaspers/janky.git
-  revision: c3764edfefede6ff0f32e5a19939448e51f302a4
+  revision: 23da4f3c5e5bfdf12568d6d06194149fbf5a65ca
   branch: not_valid
   specs:
     janky (0.9.0)
@@ -67,9 +67,9 @@ GEM
     rest-client (1.6.7)
       mime-types (>= 1.16)
     sinatra (1.3.2)
-      rack (~> 1.3, >= 1.3.6)
+      rack (>= 1.3.6, ~> 1.3)
       rack-protection (~> 1.2)
-      tilt (~> 1.3, >= 1.3.3)
+      tilt (>= 1.3.3, ~> 1.3)
     sinatra_auth_github (0.1.5)
       rest-client (~> 1.6.1)
       sinatra (~> 1.0)
