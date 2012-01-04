@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/pjaspers/janky.git
-  revision: b90119387db8944050c2f85fb10ad1ef15c1d69c
+  revision: 64d5c00910a923a25dfb5430fcb7d837a48b5e9f
   branch: not_valid
   specs:
     janky (0.9.0)
