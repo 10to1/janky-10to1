@@ -1,7 +1,7 @@
 GIT
   remote: git://github.com/pjaspers/janky.git
-  revision: 64d5c00910a923a25dfb5430fcb7d837a48b5e9f
-  branch: not_valid
+  revision: 38c18c574c41461ab67a278b86d77ca2676df5de
+  branch: legacy_push_request
   specs:
     janky (0.9.0)
       activerecord (~> 3.1.0)
