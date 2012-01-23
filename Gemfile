@@ -1,5 +1,5 @@
 source "http://rubygems.org"
-gem "janky", :git => "git://github.com/pjaspers/janky.git", :ref => "ce05fa2"
+gem "janky", :git => "git://github.com/pjaspers/janky.git", :ref => "1d9ac95"
 gem "pg"
 gem "thin"
 gem "heroku"
