@@ -1,5 +1,5 @@
 source "http://rubygems.org"
-gem "janky", :git => "git://github.com/pjaspers/janky.git", :branch => "legacy_push_request"
+gem "janky", :git => "git://github.com/pjaspers/janky.git", :ref => "a600d62efb43a34bf8c124a0f67204837aea3f5b"
 gem "pg"
 gem "thin"
 gem "heroku"
