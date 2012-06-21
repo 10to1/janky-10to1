@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/pjaspers/janky.git
-  revision: ff14b2905792ca3560cf601721fe263fac0a37b9
+  revision: d23ab1916aff0d4bef860c023f505b96f7003ed2
   specs:
     janky (0.9.11)
       activerecord (~> 3.2.0)
@@ -46,7 +46,7 @@ GEM
       netrc (~> 0.7.4)
       rest-client (~> 1.6.1)
       rubyzip
-    heroku-api (0.2.5)
+    heroku-api (0.2.6)
       excon (~> 0.14.0)
     i18n (0.6.0)
     json (1.7.3)
