@@ -56,7 +56,7 @@ if [ ! -d &quot;./.git&quot; ]; then
 fi
 git fetch -q origin
 git reset -q --hard $JANKY_SHA1
-eval \"$(rbenv init -)\"
+eval "$(rbenv init -)"
 rbenv alias --auto
 rbenv local
 rbenv rehash
