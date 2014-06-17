@@ -58,7 +58,6 @@ git fetch -q origin
 git reset -q --hard $JANKY_SHA1
 eval "$(rbenv init -)"
 rbenv alias --auto
-rbenv local
 rbenv rehash
 if [ -f script/cibuild ]; then
   script/cibuild
