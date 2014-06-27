@@ -59,6 +59,10 @@ git reset -q --hard $JANKY_SHA1
 eval "$(rbenv init -)"
 rbenv alias --auto
 rbenv rehash
+if [ -f config/database.yml ]; then
+  ~/bin/dbbuilder -v
+  ~/bin/dbbuilder -c
+fi
 if [ -f script/cibuild ]; then
   script/cibuild
 else
