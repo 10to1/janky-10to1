@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/Reprazent/janky.git
-  revision: d57c31b64492b4a01f809cf9db24212e9070d420
+  revision: dbd056c5b70b4ebc353ea3e5906618cf26f7e7f7
   specs:
     janky (0.10.3)
       activerecord (~> 3.2.0)
