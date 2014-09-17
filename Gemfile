@@ -2,7 +2,7 @@ source "http://rubygems.org"
 
 ruby "2.1.2"
 
-gem "janky", :git => "git://github.com/Reprazent/janky.git", :branch => "bvl-failure-service"
+gem "janky", :git => "git://github.com/Reprazent/janky.git", :branch => "f/failure-service"
 
 gem "pg"
 gem "thin"
