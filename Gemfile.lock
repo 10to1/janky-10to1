@@ -1,7 +1,7 @@
 GIT
   remote: git://github.com/Reprazent/janky.git
   revision: 76861478612a7a1e6c9b61efe823a7af5e0f0b89
-  branch: f/failure-service
+  branch: 10to1-janky
   specs:
     janky (0.10.3)
       activerecord (~> 3.2.0)
@@ -58,7 +58,7 @@ GEM
     mustache (0.99.6)
     nap (0.8.0)
     netrc (0.7.7)
-    octokit (3.3.1)
+    octokit (3.4.0)
       sawyer (~> 0.5.3)
     pg (0.17.1)
     rack (1.5.2)
@@ -91,7 +91,7 @@ GEM
     tzinfo (0.3.41)
     warden (1.2.3)
       rack (>= 1.0)
-    warden-github (1.0.1)
+    warden-github (1.0.2)
       octokit (> 2.1.0)
       warden (> 1.0)
     yajl-ruby (1.1.0)
