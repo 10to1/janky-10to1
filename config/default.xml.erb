@@ -73,7 +73,7 @@ fi</command>
   </builders>
   <publishers>
     <hudson.tasks.ArtifactArchiver>
-      <artifacts>**/*.(apk|ipa|dSYM.zip)</artifacts>
+      <artifacts>**/*.apk,**/*.ipa,**/*.dSYM.zip</artifacts>
       <allowEmptyArchive>true</allowEmptyArchive>
       <onlyIfSuccessful>true</onlyIfSuccessful>
       <fingerprint>false</fingerprint>
