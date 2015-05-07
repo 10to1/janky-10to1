@@ -33,8 +33,6 @@ GEM
       multi_json (~> 1.7)
       nap (~> 0.5)
     builder (3.0.4)
-    daemons (1.1.9)
-    eventmachine (1.0.3)
     excon (0.33.0)
     faraday (0.9.0)
       multipart-post (>= 1.2, < 3)
@@ -50,6 +48,7 @@ GEM
       excon (~> 0.27)
       multi_json (~> 1.8)
     i18n (0.6.11)
+    kgio (2.9.3)
     launchy (2.4.2)
       addressable (~> 2.3)
     mime-types (2.2)
@@ -64,6 +63,7 @@ GEM
     rack (1.5.2)
     rack-protection (1.5.3)
       rack
+    raindrops (0.13.0)
     rake (10.3.2)
     replicate (1.5.1)
     rest-client (1.6.7)
@@ -73,6 +73,7 @@ GEM
     sawyer (0.5.5)
       addressable (~> 2.3.5)
       faraday (~> 0.8, < 0.10)
+    shack (0.0.2)
     sinatra (1.4.5)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -82,13 +83,13 @@ GEM
       warden-github (~> 1.0)
     term-ansicolor (1.3.0)
       tins (~> 1.0)
-    thin (1.6.2)
-      daemons (>= 1.0.9)
-      eventmachine (>= 1.0.0)
-      rack (>= 1.0.0)
     tilt (1.4.1)
     tins (1.3.0)
     tzinfo (0.3.41)
+    unicorn (4.8.3)
+      kgio (~> 2.6)
+      rack
+      raindrops (~> 0.7)
     warden (1.2.3)
       rack (>= 1.0)
     warden-github (1.0.2)
@@ -103,4 +104,5 @@ DEPENDENCIES
   heroku
   janky!
   pg
-  thin
+  shack (~> 0.0.2)
+  unicorn (~> 4.8.3)
