@@ -79,35 +79,37 @@ fi</command>
       <fingerprint>false</fingerprint>
       <defaultExcludes>true</defaultExcludes>
     </hudson.tasks.ArtifactArchiver>
-    <hudson.plugins.s3.S3BucketPublisher plugin="s3@0.7">
+    <hudson.plugins.s3.S3BucketPublisher plugin="s3@0.8-SNAPSHOT">
       <profileName>10to1 S3</profileName>
       <entries>
         <hudson.plugins.s3.Entry>
           <bucket>10to1.ci.builds</bucket>
           <sourceFile>**/*.apk,**/*.ipa,**/*.dSYM.zip</sourceFile>
           <storageClass>STANDARD</storageClass>
-          <selectedRegion>EU_WEST_1</selectedRegion>
+          <selectedRegion>eu-west-1</selectedRegion>
           <noUploadOnFailure>true</noUploadOnFailure>
           <uploadFromSlave>false</uploadFromSlave>
           <managedArtifacts>true</managedArtifacts>
+          <useServerSideEncryption>false</useServerSideEncryption>
+          <flatten>false</flatten>
         </hudson.plugins.s3.Entry>
       </entries>
+      <dontWaitForConcurrentBuildCompletion>true</dontWaitForConcurrentBuildCompletion>
       <userMetadata>
         <hudson.plugins.s3.MetadataPair>
           <key>JANKY_SHA1</key>
           <value>${JANKY_SHA1}</value>
         </hudson.plugins.s3.MetadataPair>
         <hudson.plugins.s3.MetadataPair>
-          <key>JANKY_ID</key>
-          <value>${JANKY_ID}</value>
-        </hudson.plugins.s3.MetadataPair>
-        <hudson.plugins.s3.MetadataPair>
           <key>JANKY_BRANCH</key>
           <value>${JANKY_BRANCH}</value>
         </hudson.plugins.s3.MetadataPair>
+        <hudson.plugins.s3.MetadataPair>
+          <key>JANKY_ID</key>
+          <value>${JANKY_ID}</value>
+        </hudson.plugins.s3.MetadataPair>
       </userMetadata>
-    </hudson.plugins.s3.S3BucketPublisher>
-  </publishers>
+    </hudson.plugins.s3.S3BucketPublisher>  </publishers>
   <buildWrappers>
     <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.14.1">
       <strategy class="hudson.plugins.build_timeout.impl.NoActivityTimeOutStrategy">
