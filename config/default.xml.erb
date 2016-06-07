@@ -56,6 +56,10 @@ if [ ! -d &quot;./.git&quot; ]; then
 fi
 git fetch -q origin
 git reset -q --hard $JANKY_SHA1
+export REPO_NAME=$(git config --get remote.origin.url | cut -d: -f2 | cut -d. -f1)
+if [ -n "$REPO_NAME" ]; then
+  export PULL_REQUEST_ID=$(curl -H "Authorization: Bearer $GITHUB_ACCESS_TOKEN" https://api.github.com/repos/$REPO_NAME/pulls | jq "map(select(.head.sha == \"`echo $JANKY_SHA1`\"))[].number" | grep -o '[0-9]*')
+fi
 eval "$(rbenv init -)"
 rbenv alias --auto
 rbenv rehash
