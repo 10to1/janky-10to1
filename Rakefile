@@ -5,8 +5,9 @@ require "janky/tasks"
 
 desc "Truncate parts of the database"
 task :remove_builds_and_commits do
-  Janky::Build.delete_all
-  Janky::Commit.delete_all
+  date = ENV["DATE"] ? Date.parse(ENV["date"]) : 2.weeks.ago
+  Janky::Build.where("created_at < ?", date).delete_all
+  Janky::Commit.where("created_at < ?", date).delete_all
 
   require "janky/chat_service/hubot"
   Janky::ChatService.speak("[ci] Ik heb alle builds en alle commits weggegooid. #yolo", "#general")
