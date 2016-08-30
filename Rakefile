@@ -3,6 +3,14 @@ require "janky/chat_service/hubot"
 Janky.setup(ENV)
 require "janky/tasks"
 
+desc "Fire up a console"
+task :console do
+  require "janky"
+  Janky.setup(ENV)
+  ARGV.clear
+  IRB.start
+end
+
 desc "Truncate parts of the database"
 task :remove_builds_and_commits do
   date = ENV["DATE"] ? Date.parse(ENV["date"]) : 2.weeks.ago
