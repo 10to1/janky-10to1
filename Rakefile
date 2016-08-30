@@ -5,6 +5,8 @@ require "janky/tasks"
 
 desc "Fire up a console"
 task :console do
+  require "irb"
+  require "irb/completion"
   require "janky"
   Janky.setup(ENV)
   ARGV.clear
